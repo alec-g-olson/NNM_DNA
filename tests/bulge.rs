@@ -8,7 +8,7 @@
 //!
 //! All values at 1 M NaCl, 37 °C.
 
-use n3dna::{aligned_duplex_thermo, AlignedDuplex, Duplex, Sequence};
+use nnm_dna::{aligned_duplex_thermo, AlignedDuplex, Duplex, Sequence};
 
 const T_REF: f64 = 310.15;
 
@@ -16,7 +16,7 @@ fn close(a: f64, b: f64, tol: f64) -> bool {
     (a - b).abs() < tol
 }
 
-fn thermo_aligned(top_str: &str, bot_str: &str) -> n3dna::Thermo {
+fn thermo_aligned(top_str: &str, bot_str: &str) -> nnm_dna::Thermo {
     let top = Sequence::parse(top_str).unwrap();
     let bot = Sequence::parse(bot_str).unwrap();
     let aligned = AlignedDuplex::align(top, bot).unwrap();
@@ -102,7 +102,7 @@ fn bulge_destabilizes_relative_to_perfect() {
 
     // Perfect: bottom = rev_comp(top) = "CACGT"
     let perfect = Duplex::perfect(top.clone());
-    let t_perfect = n3dna::duplex_thermo(&perfect).unwrap();
+    let t_perfect = nnm_dna::duplex_thermo(&perfect).unwrap();
 
     // Bulged: replace bottom with a 4-mer so top[3]=T has no partner
     let bot = Sequence::parse("CCGT").unwrap();

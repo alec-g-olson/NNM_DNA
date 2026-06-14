@@ -5,7 +5,7 @@
 //! list — so this is a strong end-to-end check that the new pathway didn't
 //! introduce drift in the WC fast path.
 
-use n3dna::{aligned_duplex_thermo, duplex_thermo, AlignedDuplex, Duplex, Sequence};
+use nnm_dna::{aligned_duplex_thermo, duplex_thermo, AlignedDuplex, Duplex, Sequence};
 
 fn assert_close(a: f64, b: f64, label: &str) {
     let diff = (a - b).abs();

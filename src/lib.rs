@@ -14,7 +14,7 @@
 //! # Example
 //!
 //! ```
-//! use n3dna::{Duplex, Sequence, duplex_thermo};
+//! use nnm_dna::{Duplex, Sequence, duplex_thermo};
 //!
 //! // Perfect duplex from one strand.
 //! let dx = Duplex::perfect(Sequence::parse("CGTTGA").unwrap());

@@ -10,7 +10,7 @@
 //! - `Owczarzy`: Owczarzy et al. (2004). *Biochemistry* 43:3537.
 //!   1/Tm(salt) = 1/Tm(1 M) + (4.29·fGC − 3.95)·10⁻⁵·ln[Na⁺] + 9.40·10⁻⁶·(ln[Na⁺])².
 
-use n3dna::{duplex_thermo, Duplex, SaltCorrection, Sequence};
+use nnm_dna::{duplex_thermo, Duplex, SaltCorrection, Sequence};
 
 const R: f64 = 1.987;
 
@@ -18,7 +18,7 @@ fn close(a: f64, b: f64, tol: f64) -> bool {
     (a - b).abs() < tol
 }
 
-fn thermo_of(seq: &str) -> n3dna::Thermo {
+fn thermo_of(seq: &str) -> nnm_dna::Thermo {
     duplex_thermo(&Duplex::perfect(Sequence::parse(seq).unwrap())).unwrap()
 }
 

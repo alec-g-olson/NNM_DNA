@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "n3dna"
+name = "nnm_dna"
 version = "0.1.0"

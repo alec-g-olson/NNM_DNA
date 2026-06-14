@@ -1,5 +1,5 @@
 [package]
-name = "n3dna"
+name = "nnm_dna"
 version = "0.1.0"
 edition = "2021"
 description = "SantaLucia 1998 unified nearest-neighbor thermodynamic model for DNA duplex stability."
@@ -7,5 +7,5 @@ license = "MIT"
 repository = "https://github.com/alec-g-olson/NNM_DNA"
 
 [lib]
-name = "n3dna"
+name = "nnm_dna"
 path = "src/lib.rs"

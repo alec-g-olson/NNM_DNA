@@ -5,7 +5,7 @@
 //! self-complementary. Tm defined as the temperature where 50% of the
 //! limiting strand is in the duplex form.
 
-use n3dna::{
+use nnm_dna::{
     duplex_thermo, Duplex, ReactionConditions, SaltCorrection, Sequence, Thermo,
 };
 

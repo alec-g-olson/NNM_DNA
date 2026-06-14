@@ -1,13 +1,13 @@
 //! Integration tests against worked examples from SantaLucia 1998 and standard
 //! NN-model walkthroughs. Perfect Watson-Crick duplexes only.
 
-use n3dna::{duplex_thermo, Duplex, Sequence};
+use nnm_dna::{duplex_thermo, Duplex, Sequence};
 
 fn close(a: f64, b: f64, tol: f64) -> bool {
     (a - b).abs() < tol
 }
 
-fn perfect_thermo(seq: &str) -> n3dna::Thermo {
+fn perfect_thermo(seq: &str) -> nnm_dna::Thermo {
     let dx = Duplex::perfect(Sequence::parse(seq).unwrap());
     duplex_thermo(&dx).unwrap()
 }

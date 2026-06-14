@@ -9,7 +9,7 @@
 //! Hicks 2004 Table 4 as a fallback. Will be replaced when we extract the
 //! proper internal-loop column.
 
-use n3dna::{aligned_duplex_thermo, AlignedDuplex, AlignedPosition, Base, Sequence};
+use nnm_dna::{aligned_duplex_thermo, AlignedDuplex, AlignedPosition, Base, Sequence};
 
 fn close(a: f64, b: f64, tol: f64) -> bool {
     (a - b).abs() < tol
@@ -109,8 +109,8 @@ fn loop_destabilizes_relative_to_perfect_stems() {
     use Base::*;
 
     // 4 bp perfect duplex with same flanking stems: ACTG/CAGT
-    let perfect = n3dna::Duplex::perfect(Sequence::parse("ACTG").unwrap());
-    let t_perfect = n3dna::duplex_thermo(&perfect).unwrap();
+    let perfect = nnm_dna::Duplex::perfect(Sequence::parse("ACTG").unwrap());
+    let t_perfect = nnm_dna::duplex_thermo(&perfect).unwrap();
 
     // Same flanking stems + 2×1 loop in middle
     let top = Sequence::parse("ACAATG").unwrap();

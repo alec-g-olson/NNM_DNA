@@ -7,7 +7,7 @@
 //! - A·C: Allawi & SantaLucia (1998), Biochemistry 37:9435 (pH 7.0)
 //! - A·A, C·C, G·G, T·T: Peyret et al. (1999), Biochemistry 38:3468
 
-use n3dna::{duplex_thermo, Base, Duplex, DuplexError, Sequence};
+use nnm_dna::{duplex_thermo, Base, Duplex, DuplexError, Sequence};
 
 fn close(a: f64, b: f64, tol: f64) -> bool {
     (a - b).abs() < tol

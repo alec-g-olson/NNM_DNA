@@ -7,7 +7,7 @@
 //! runs NW on `top` against `bottom.reverse_complement()`, so a duplex with WC
 //! pairs at every position has `top == bottom.reverse_complement()`.
 
-use n3dna::{AlignError, AlignedDuplex, AlignedPosition, Base, Sequence};
+use nnm_dna::{AlignError, AlignedDuplex, AlignedPosition, Base, Sequence};
 
 #[test]
 fn wc_only_returns_diagonal_no_gaps() {
