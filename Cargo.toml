@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "SantaLucia 1998 unified nearest-neighbor thermodynamic model for DNA duplex stability."
 license = "MIT"
-repository = "https://github.com/alecgolson/N3DNA"
+repository = "https://github.com/alec-g-olson/NNM_DNA"
 
 [lib]
 name = "n3dna"
